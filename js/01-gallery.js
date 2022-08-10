@@ -19,11 +19,11 @@ function createItemsMarkup(item) {
     })
     .join("");
 }
-const onImageClick = (evt) => {
-  evt.preventDefault();
+const onImageClick = (event) => {
+  event.preventDefault();
 
-  if (evt.target.classList.contains("gallery")) return;
-    const source = evt.target.dataset.source;
+  if (event.target.classList.contains("gallery")) return;
+    const source = event.target.dataset.source;
     
   const instance = basicLightbox.create(`
     <img src="${source}"width="800" height="600">`);
